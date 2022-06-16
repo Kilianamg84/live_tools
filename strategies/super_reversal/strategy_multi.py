@@ -21,48 +21,41 @@ account_to_select = "account1"
 
 params_coin = {
     "BTC/USD": {
-        "wallet_exposure": 0.1,
+        "wallet_exposure": 0.3,
         "st_short_atr_window": 15,
         "st_short_atr_multiplier": 5,
         "short_ema_window": 20,
         "long_ema_window": 400
     },
     "AVAX/USD": {
+        "wallet_exposure": 0.1,
+        "st_short_atr_window": 15,
+        "st_short_atr_multiplier": 5,
+        "short_ema_window": 25,
+        "long_ema_window": 400
+    },
+    "ETH/USD": {
+        "wallet_exposure": 0.3,
+        "st_short_atr_window": 15,
+        "st_short_atr_multiplier": 5,
+        "short_ema_window": 20,
+        "long_ema_window": 400
+    },
+    "SOL/USD": {
         "wallet_exposure": 0.2,
         "st_short_atr_window": 15,
         "st_short_atr_multiplier": 5,
         "short_ema_window": 25,
         "long_ema_window": 400
     },
-    "LTC/USD": {
-        "wallet_exposure": 0.2,
-        "st_short_atr_window": 15,
-        "st_short_atr_multiplier": 5,
-        "short_ema_window": 5,
-        "long_ema_window": 400
-    },
-    "LINK/USD": {
-        "wallet_exposure": 0.2,
-        "st_short_atr_window": 15,
-        "st_short_atr_multiplier": 5,
-        "short_ema_window": 20,
-        "long_ema_window": 400
-    },
-    "XRP/USD": {
-        "wallet_exposure": 0.2,
+    "SAND/USD": {
+        "wallet_exposure": 0.1,
         "st_short_atr_window": 15,
         "st_short_atr_multiplier": 5,
         "short_ema_window": 15,
         "long_ema_window": 400
     },
-    "CHZ/USD": {
-        "wallet_exposure": 0.1,
-        "st_short_atr_window": 15,
-        "st_short_atr_multiplier": 5,
-        "short_ema_window": 20,
-        "long_ema_window": 400
-    },
-}
+
 
 if sum(d["wallet_exposure"] for d in params_coin.values() if d) > 1:
     raise ValueError("Wallet exposure must be less or equal than 1")
